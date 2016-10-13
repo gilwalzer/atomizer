@@ -12,7 +12,7 @@ Usage: ${0##*/} [-e EDITOR] [-l LANGUAGE] [-b INCLUDE]
 
     -l LANGUAGE   initialize Atom with convenient packages for a language.
                   Arguments include "python", "java", "go", and "all".
-   
+
     -b INCLUDE    initialize Atom with a set of basic packages.
                   Arguments include "include".
 
@@ -67,6 +67,7 @@ then
   apm install build
   apm install busy
   apm install linter
+  apm install platformio-ide-terminal
   apm install set-syntax
   apm install tag
   apm install text-manipulation
@@ -121,4 +122,3 @@ if ([[ "$language_name" == "go" ]] || [[ "$language_name" == "all" ]])
 then
   echo "\n\nInstalling Python atom packages..."
 fi
-
