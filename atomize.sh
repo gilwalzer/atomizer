@@ -58,13 +58,15 @@ shift "$((OPTIND-1))" # Shift off the options and optional --.
 # Install basic recommended atom packages
 if [[ "$basic_commands" == "include" ]]
 then
-  echo "Installing basic atom packages and themes..."
+  echo "\n\nInstalling basic atom packages and themes..."
   apm install auto-update-plus
   apm install atom-wrap-in-tag
   apm install atom-beautify
   apm install autocomplete-java
   apm install browse
   apm install build
+  apm install busy
+  apm install linter
   apm install set-syntax
   apm install tag
   apm install text-manipulation
@@ -73,7 +75,7 @@ fi
 # Install Sublime atom packages
 if ([[ $editor_name == "sublime" ]] || [[ "$editor_name" == "all" ]])
 then
-  echo "Installing Sublime atom packages and themes..."
+  echo "\n\nInstalling Sublime atom packages and themes..."
   apm install minimap
   apm install multi-cursor
   apm install sublime
@@ -88,16 +90,14 @@ fi
 # Install Eclipse packages
 if ([[ "$editor_name" == "eclipse" ]] || [[ "$editor_name" == "all" ]])
 then
-  echo "Installing Eclipse atom packages and themes..."
+  echo "\n\nInstalling Eclipse atom packages and themes..."
   apm install eclipse-keybindings
-  apm install cold-ui
-  apm install cold-syntax
 fi
 
 # Install Java atom packages
 if ([[ "$language_name" == "java" ]] || [[ "$language_name" == "all" ]])
 then
-  echo "Installing Java atom packages..."
+  echo "\n\nInstalling Java atom packages..."
   apm install autocomplete-java
   apm install java-importer
   apm install java-generator
@@ -108,15 +108,17 @@ fi
 # Install Python atom packages
 if ([[ "$language_name" == "python" ]] || [[ "$language_name" == "all" ]])
 then
-  echo "Installing Python atom packages..."
+  echo "\n\nInstalling Python atom packages..."
   apm install autocomplete-python
   apm install atom-python-run
+  apm install linter-python
   apm install python-debugger
+  apm install python-tools
 fi
 
 # Install Go atom packages
 if ([[ "$language_name" == "go" ]] || [[ "$language_name" == "all" ]])
 then
-  echo "Installing Python atom packages..."
+  echo "\n\nInstalling Python atom packages..."
 fi
 
