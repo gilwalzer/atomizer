@@ -98,6 +98,9 @@ fi
 if ([[ "$language_name" == "java" ]] || [[ "$language_name" == "all" ]])
 then
   echo "Installing Java atom packages..."
+  apm install autocomplete-java
+  apm install java-importer
+  apm install java-generator
   apm install linter
   apm install linter-javac
 fi
@@ -106,6 +109,9 @@ fi
 if ([[ "$language_name" == "python" ]] || [[ "$language_name" == "all" ]])
 then
   echo "Installing Python atom packages..."
+  apm install autocomplete-python
+  apm install atom-python-run
+  apm install python-debugger
 fi
 
 # Install Go atom packages
